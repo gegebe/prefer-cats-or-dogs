@@ -12,25 +12,27 @@
 <body>
     <main class="container" id="app">
 
-        <label for="euros">
+        <label for="animals">
             Prefiero:
-            <select v-model="favoriteAnimal">
+            <select id="animals" v-model="favoriteAnimal">
                 <option value="">Seleccionar</option>
                 <option value="gatos">Gatos, miau! </option>
                 <option value="perros">Perros, guau!</option>
             </select>
         </label>
 
-        <h3>Me gustan más los </h3>
+        <h3>Me gustan más los {{ favoriteAnimal }}</h3>
 
         <section class="container">
             <h3>Selecciona un tipo de animal y te mostraremos una imagen 😄 </h3>
         </section>
-        <section class="container">
+
+        <section v-show="CatsOrDogs" class="container">
             <h3>¡Gatos!</h3>
             <img src="https://cdn2.thecatapi.com/images/MjA4MzQ4NQ.jpg" alt="">
         </section>
-        <section class="container">
+
+        <section v-show="CatsOrDogs"  class="container">
             <h3>¡Perros!</h3>
             <img src="https://cdn2.thedogapi.com/images/AwKd_0wL4.jpg" alt="">
         </section>

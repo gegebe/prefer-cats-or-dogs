@@ -9,8 +9,7 @@ createApp({
     const favoriteAnimal = ref("");
 
     const CatsOrDogs = computed(()=>{
-      favoriteAnimal.value ? "gatos" : "perros";
-      return CatsOrDogs
+      return favoriteAnimal.value == "gatos";
     })
 
     return {

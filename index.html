@@ -27,12 +27,16 @@
             <h3>Selecciona un tipo de animal y te mostraremos una imagen 😄 </h3>
         </section>
 
-        <section v-show="CatsOrDogs" class="container">
+        <!--favoriteAnimal recoge el valor seleccionado-->
+
+        <!--CatsOrDogs es true o false, si es true muestra gatos, si es false perros-->
+        
+        <section v-if="CatsOrDogs" v-show="favoriteAnimal" class="container">
             <h3>¡Gatos!</h3>
             <img src="https://cdn2.thecatapi.com/images/MjA4MzQ4NQ.jpg" alt="">
         </section>
 
-        <section v-show="CatsOrDogs"  class="container">
+        <section v-else="CatsOrDogs" v-show="favoriteAnimal" class="container">
             <h3>¡Perros!</h3>
             <img src="https://cdn2.thedogapi.com/images/AwKd_0wL4.jpg" alt="">
         </section>
